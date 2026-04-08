@@ -1,0 +1,74 @@
+"use client";
+
+type Props = {
+  open: boolean;
+  setOpen: (value: boolean) => void;
+};
+
+export default function Sidebar({ open, setOpen }: Props) {
+  return (
+    <>
+      {/* OVERLAY */}
+      <div
+        onClick={() => setOpen(false)}
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-all duration-300 ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      />
+
+      {/* SIDEBAR PANEL */}
+      <div
+        className={`fixed top-0 right-0 h-full w-[280px] sm:w-[320px] bg-[#0d0d0d] z-50 transform transition-transform duration-300 ease-in-out ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* CLOSE BUTTON */}
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute top-6 right-6 text-3xl text-white"
+        >
+          ✕
+        </button>
+
+        {/* MENU ITEMS */}
+        <div className="flex flex-col h-full justify-center items-center gap-8 text-lg font-semibold tracking-wide">
+          <a
+            href="#"
+            onClick={() => setOpen(false)}
+            className="hover:text-gray-400 transition"
+          >
+            HOME
+          </a>
+          <a
+            href="#"
+            onClick={() => setOpen(false)}
+            className="hover:text-gray-400 transition"
+          >
+            ABOUT
+          </a>
+          <a
+            href="#"
+            onClick={() => setOpen(false)}
+            className="hover:text-gray-400 transition"
+          >
+            PORTFOLIO
+          </a>
+          <a
+            href="#"
+            onClick={() => setOpen(false)}
+            className="hover:text-gray-400 transition"
+          >
+            BLOG
+          </a>
+          <a
+            href="#"
+            onClick={() => setOpen(false)}
+            className="hover:text-gray-400 transition"
+          >
+            CONTACTS
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
