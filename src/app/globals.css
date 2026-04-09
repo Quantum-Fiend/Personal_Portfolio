@@ -8,3 +8,8 @@ body {
 	background-color: black;
 	color: white;
 }
+
+.icon {
+  @apply text-white text-lg p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20
+  transition-all duration-300 hover:bg-white hover:text-black hover:scale-110 shadow-md;
+}
