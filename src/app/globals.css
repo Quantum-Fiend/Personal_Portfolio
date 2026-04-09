@@ -10,6 +10,61 @@ body {
 }
 
 .icon {
-  @apply text-white text-lg p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20
-  transition-all duration-300 hover:bg-white hover:text-black hover:scale-110 shadow-md;
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  transition: all 300ms;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Instagram (gradient) */
+.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+}
+.instagram:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #dd2a7b;
+}
+
+/* LinkedIn */
+.linkedin {
+  background: #0077b5;
+  color: white;
+}
+.linkedin:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #0077b5;
+}
+
+/* GitHub */
+.github {
+  background: #181717;
+  color: white;
+}
+.github:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #ffffff;
+}
+
+/* Email */
+.email {
+  background: #ea4335;
+  color: white;
+}
+.email:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #ea4335;
+}
+
+/* Discord */
+.discord {
+  background: #5865f2;
+  color: white;
+}
+.discord:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px #5865f2;
 }
