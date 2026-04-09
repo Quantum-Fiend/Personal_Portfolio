@@ -1,8 +1,40 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState , useEffect } from "react";
 
 const Hero = () => {
+	const text = "MY NAME IS ";
+  const name = "TUSHAR SINGH";
+
+  const [displayedText, setDisplayedText] = useState("");
+  const [displayedName, setDisplayedName] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+
+    const interval1 = setInterval(() => {
+      if (i < text.length) {
+        setDisplayedText(text.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(interval1);
+
+        let j = 0;
+        const interval2 = setInterval(() => {
+          if (j < name.length) {
+            setDisplayedName(name.slice(0, j + 1));
+            j++;
+          } else {
+            clearInterval(interval2);
+          }
+        }, 70);
+      }
+    }, 70);
+
+    return () => clearInterval(interval1);
+  }, []);
   return (
     <section className="w-full min-h-screen bg-black text-white flex items-center px-6 sm:px-12 md:px-24 lg:px-32">
       {/* Container */}
@@ -17,10 +49,17 @@ const Hero = () => {
             </p>
 
             {/* Big Heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold  md:leading-tight">
-              MY NAME IS <br />
-              TUSHAR SINGH
-            </h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold md:leading-tight"
+            >
+              {displayedText}
+              <br />
+              {displayedName}
+              <span className="animate-pulse">|</span>
+            </motion.h1>
 
             <h2
               className="
