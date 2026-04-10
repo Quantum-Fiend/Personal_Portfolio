@@ -2,6 +2,8 @@
 import AboutSection from "@/Components/home/AboutSection";
 import Hero from "@/Components/home/Hero";
 import Skills from "@/Components/home/SkillsSection";
+import ProjectSection from "@/Components/home/ProjectSection";
+
 
 const page = () => {
   return (
@@ -9,6 +11,7 @@ const page = () => {
       <Hero />
       <AboutSection />
       <Skills />
+      <ProjectSection />
     </div>
   );
 };
