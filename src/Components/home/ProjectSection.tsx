@@ -66,83 +66,103 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* GRID */}
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group relative w-full max-w-sm"
-            >
-              {/* glow border effect */}
-              <div className="absolute -inset-px bg-linear-to-r from-purple-500/20 via-transparent to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
+        <div className="relative">
+          {/* BACKGROUND GLOW ORBS */}
+          <div className="absolute -top-20 left-10 w-72 h-72 bg-purple-500/10 blur-3xl rounded-full" />
+          <div className="absolute bottom-0 right-10 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full" />
 
-              {/* CARD */}
-              <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl shadow-lg transition-all duration-500 group-hover:shadow-purple-500/10">
-                {/* IMAGE */}
-                <div className="relative h-52 w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition duration-500"
-                  />
+          {/* GRID */}
+          <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+            {projects.map((project, i) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="group relative w-full max-w-sm"
+              >
+                {/* OUTER GLOW BORDER */}
+                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
 
-                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
-                </div>
+                {/* CARD */}
+                <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl shadow-xl transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-purple-500/20">
+                  {/* IMAGE SECTION */}
+                  <div className="relative h-60 w-full overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-110"
+                    />
 
-                {/* CONTENT */}
-                <div className="p-5">
-                  <h3 className="text-xl font-semibold group-hover:text-white transition">
-                    {project.title}
-                  </h3>
+                    {/* DARK GRADIENT */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-                  <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
-                    {project.description}
-                  </p>
+                    {/* TOP BADGE */}
+                    <div className="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-black/40 border border-white/10 text-white/70 backdrop-blur-md">
+                      Project 0{i + 1}
+                    </div>
 
-                  {/* TAGS */}
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[11px] px-2 py-1 rounded-full bg-zinc-800 text-zinc-300 border border-zinc-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                    {/* SCANLINE HOVER EFFECT */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%]" />
 
-                  {/* LINKS */}
-                  <div className="flex items-center gap-5 mt-6">
-                    {project.liveUrl && (
+                    {/* CTA OVERLAY */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
                       <a
                         href={project.liveUrl}
                         target="_blank"
-                        className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition"
+                        className="px-5 py-2 rounded-full bg-white text-black text-sm font-medium shadow-lg hover:scale-105 transition"
                       >
-                        <ExternalLink size={16} />
-                        Live
+                        View Live Project
                       </a>
-                    )}
+                    </div>
+                  </div>
 
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        className="flex items-center gap-2 text-sm text-zinc-300 hover:text-white transition"
-                      >
-                        <Github size={16} />
-                        Code
-                      </a>
-                    )}
+                  {/* CONTENT */}
+                  <div className="p-6">
+                    {/* TITLE */}
+                    <h3 className="text-xl font-semibold text-white group-hover:text-white transition">
+                      {project.title}
+                    </h3>
+
+                    {/* ACCENT LINE */}
+                    <div className="w-10 h-[2px] bg-gradient-to-r from-white/60 to-transparent mt-2 group-hover:w-16 transition-all duration-500" />
+
+                    {/* DESCRIPTION */}
+                    <p className="text-sm text-zinc-400 mt-4 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* ACTIONS */}
+                    <div className="flex items-center justify-between mt-6">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition"
+                        >
+                          <ExternalLink size={16} />
+                          Live
+                        </a>
+                      )}
+
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          className="flex items-center gap-2 text-sm text-zinc-300 hover:text-white transition"
+                        >
+                          <Github size={16} />
+                          Code
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* SEE MORE BUTTON */}
