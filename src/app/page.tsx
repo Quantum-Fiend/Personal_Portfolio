@@ -1,11 +1,12 @@
 "use client";
+import AboutSection from "@/Components/home/AboutSection";
 import Hero from "@/Components/home/Hero";
-import React from "react";
 
 const page = () => {
   return (
     <div>
       <Hero />
+      <AboutSection />
     </div>
   );
 };

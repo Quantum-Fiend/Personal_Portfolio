@@ -35,6 +35,7 @@ const Hero = () => {
 
     return () => clearInterval(interval1);
   }, []);
+   const [position, setPosition] = useState({ x: 0, y: 0 });
   return (
     <section className="w-full min-h-screen bg-black text-white flex items-center px-6 sm:px-12 md:px-24 lg:px-32">
       {/* Container */}
@@ -109,13 +110,39 @@ const Hero = () => {
           </div>
 
           {/* RIGHT COLUMN */}
-          <div className="md:w-1/2 flex justify-center mt-8 md:mt-0 relative">
-            {/* Main Image Container with rounded corners on top-left & bottom-right */}
-            <div
-              className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-md lg:h-112 xl:w-lg xl:h-128
-      overflow-hidden border-4 border-gray-400"
+          <div
+            className="md:w-1/2 flex justify-center mt-8 md:mt-0 relative"
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              setPosition({
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top,
+              });
+            }}
+          >
+            {/* 🔥 Cursor Glow (BEHIND everything) */}
+            <motion.div
+              className="absolute pointer-events-none z-0"
+              animate={{
+                left: position.x - 150,
+                top: position.y - 150,
+              }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.2 }}
               style={{
-                borderRadius: "2rem 0 2rem 0", // top-left & bottom-right rounded
+                width: 300,
+                height: 300,
+                background:
+                  "radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)",
+                filter: "blur(60px)",
+              }}
+            />
+
+            {/* Main Image */}
+            <div
+              className="relative z-10 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-md lg:h-112 xl:w-lg xl:h-128
+        overflow-hidden border border-gray-200 backdrop-blur-xl"
+              style={{
+                borderRadius: "2rem 0 2rem 0",
               }}
             >
               <Image
@@ -125,16 +152,18 @@ const Hero = () => {
                 alt="profile"
                 className="w-full h-full object-cover"
               />
+
+              {/* subtle overlay for blending */}
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
 
-            {/* Larger Overlapping Image with heavy rounding top-right & bottom-left */}
+            {/* Floating Image */}
             <div
-              className="absolute top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64
-      overflow-hidden border-4 border-gray-300 shadow-lg"
+              className="absolute z-20 top-0 right-0 w-36 h-36 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-60 lg:h-60 xl:w-64 xl:h-64
+        overflow-hidden border border-gray-300 shadow-lg"
               style={{
-                borderRadius: "0 4rem 0 4rem", // heavy rounding top-right & bottom-left
-                transform: "translate(40%, -40%)", // slight overlap outside main image
-                backgroundColor: "#f0f0f0", // subtle background behind image for visual separation
+                borderRadius: "0 4rem 0 4rem",
+                transform: "translate(40%, -40%)",
               }}
             >
               <Image
@@ -144,6 +173,8 @@ const Hero = () => {
                 alt="profile small overlay"
                 className="w-full h-full object-cover"
               />
+
+              <div className="absolute inset-0 bg-black/20"></div>
             </div>
           </div>
         </div>
