@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/Components/layouts/header";
 import SocialBar from "@/Components/ui/SocialBar";
 import SplashCursor from "@/Components/ui/SplashCursor";
+import Footer from "@/Components/layouts/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <SplashCursor />
         <SocialBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
