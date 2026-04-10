@@ -77,7 +77,7 @@ export default function ProjectsSection() {
               className="group relative w-full max-w-sm"
             >
               {/* glow border effect */}
-              <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
+              <div className="absolute -inset-px bg-linear-to-r from-purple-500/20 via-transparent to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
 
               {/* CARD */}
               <div className="relative overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl shadow-lg transition-all duration-500 group-hover:shadow-purple-500/10">
@@ -90,7 +90,7 @@ export default function ProjectsSection() {
                     className="object-cover group-hover:scale-110 transition duration-500"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
                 </div>
 
                 {/* CONTENT */}
