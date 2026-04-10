@@ -83,7 +83,7 @@ export default function ProjectsSection() {
                 className="group relative w-full max-w-sm"
               >
                 {/* OUTER GLOW BORDER */}
-                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
+                <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
 
                 {/* CARD */}
                 <div className="relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900/60 backdrop-blur-xl shadow-xl transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-purple-500/20">
@@ -97,7 +97,7 @@ export default function ProjectsSection() {
                     />
 
                     {/* DARK GRADIENT */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent" />
 
                     {/* TOP BADGE */}
                     <div className="absolute top-4 left-4 px-3 py-1 text-xs rounded-full bg-black/40 border border-white/10 text-white/70 backdrop-blur-md">
@@ -105,7 +105,7 @@ export default function ProjectsSection() {
                     </div>
 
                     {/* SCANLINE HOVER EFFECT */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%]" />
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-linear-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full" />
 
                     {/* CTA OVERLAY */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                     </h3>
 
                     {/* ACCENT LINE */}
-                    <div className="w-10 h-[2px] bg-gradient-to-r from-white/60 to-transparent mt-2 group-hover:w-16 transition-all duration-500" />
+                    <div className="w-10 h-0.5 bg-linear-to-r from-white/60 to-transparent mt-2 group-hover:w-16 transition-all duration-500" />
 
                     {/* DESCRIPTION */}
                     <p className="text-sm text-zinc-400 mt-4 leading-relaxed">
