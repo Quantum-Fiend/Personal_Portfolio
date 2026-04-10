@@ -130,7 +130,7 @@ export default function Skills() {
                 whileTap={{ scale: 0.95 }}
                 className="px-10 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
               >
-                Explore Full Stack Skills →
+                Explore Skills →
               </motion.button>
             </motion.div>
           </div>
