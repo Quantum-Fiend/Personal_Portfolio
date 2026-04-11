@@ -1,4 +1,5 @@
 import PageBanner from "@/Components/sections/PageBanner";
+import AboutSection from "@/Components/sections/AboutSection";
 
 const about = () => {
   return (
@@ -15,6 +16,7 @@ const about = () => {
           "Performance Focus",
         ]}
       />
+      <AboutSection />
     </div>
   );
 };
