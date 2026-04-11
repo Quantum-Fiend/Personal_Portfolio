@@ -1,4 +1,5 @@
 "use client";
+import ContactSection from "@/Components/sections/ContactSection";
 import PageBanner from "@/Components/sections/PageBanner";
 
 
@@ -11,6 +12,7 @@ const page = () => {
         tag="Available for collaborations & product builds"
         subtitle="Open to building impactful digital experiences, collaborations, and engineering opportunities."
       />
+      <ContactSection />
     </div>
   );
 };
