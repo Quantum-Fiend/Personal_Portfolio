@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 type Project = {
   title: string;
@@ -80,13 +81,15 @@ function ProjectCard({ p }: { p: Project }) {
       className="group relative w-full max-w-md mx-auto p-6 rounded-3xl border border-white/10 bg-white/5 overflow-hidden"
     >
       {/* glow */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-white/15 via-transparent to-transparent blur-2xl" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-br from-white/15 via-transparent to-transparent blur-2xl" />
 
       {/* IMAGE (BIGGER NOW) */}
       <div className="relative z-10 overflow-hidden rounded-2xl mb-5 border border-white/10">
-        <img
-          src={p.image}
+        <Image
+          src={p.image || IMAGE}
           alt={p.title}
+          width={800}
+          height={500}
           className="w-full h-56 object-cover group-hover:scale-110 transition duration-700"
         />
       </div>
@@ -221,7 +224,7 @@ export default function ProjectsSection() {
                hover:border-white/30 hover:shadow-[0_20px_60px_rgba(255,255,255,0.15)] flex items-center gap-2 text-sm text-gray-300"
           >
             {/* glow */}
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-white/20 via-transparent to-transparent blur-xl" />
+            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-r from-white/20 via-transparent to-transparent blur-xl" />
 
             {/* icon */}
             <FiGithub className="text-lg relative z-10" />
