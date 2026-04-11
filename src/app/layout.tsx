@@ -6,6 +6,7 @@ import SocialBar from "@/Components/ui/SocialBar";
 import SplashCursor from "@/Components/ui/SplashCursor";
 import Footer from "@/Components/layouts/footer";
 import ShootingStarsBackground from "@/Components/ui/ShootingStarEffect";
+import ScrollToTop from "@/Components/ui/ScrollTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
           <main>{children}</main>
 
           <Footer />
+          <ScrollToTop />
         </div>
       </body>
     </html>
