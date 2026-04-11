@@ -73,8 +73,8 @@ export default function ArticlesPage() {
       <div className="absolute inset-0 bg-black" />
 
       {/* glowing orbs */}
-      <div className="absolute top-[-250px] left-[-200px] w-[700px] h-[700px] bg-white/10 blur-[200px] rounded-full" />
-      <div className="absolute bottom-[-250px] right-[-200px] w-[700px] h-[700px] bg-gray-400/10 blur-[220px] rounded-full" />
+      <div className="absolute -top-62.5 -left-50 w-175 h-175 bg-white/10 blur-[200px] rounded-full" />
+      <div className="absolute -bottom-62.5 -right-50 w-175 h-175 bg-gray-400/10 blur-[220px] rounded-full" />
 
       {/* grid */}
       <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[100px_100px]" />
@@ -111,7 +111,7 @@ export default function ArticlesPage() {
                          hover:shadow-[0_0_120px_rgba(255,255,255,0.15)]"
             >
               {/* glow effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-linear-to-br from-white/20 via-transparent to-transparent" />
 
               {/* TITLE */}
               <h2 className="text-xl font-semibold text-white text-center">

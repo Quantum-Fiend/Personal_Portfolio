@@ -9,8 +9,8 @@ export default function ContactSection() {
       {/* 🌌 CINEMATIC BACKGROUND */}
       <div className="absolute inset-0 bg-black" />
 
-      <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-white/10 blur-[140px] rounded-full" />
-      <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-gray-400/10 blur-[160px] rounded-full" />
+      <div className="absolute -top-50 -left-50 w-125 h-125 bg-white/10 blur-[140px] rounded-full" />
+      <div className="absolute -bottom-50 -right-50 w-125 h-125 bg-gray-400/10 blur-[160px] rounded-full" />
 
       <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[90px_90px]" />
 
@@ -40,7 +40,7 @@ export default function ContactSection() {
             className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
                        hover:shadow-[0_0_80px_rgba(255,255,255,0.15)] transition"
           >
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-br from-white/20 via-transparent to-transparent" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-linear-to-br from-white/20 via-transparent to-transparent" />
 
             <FiMail className="text-3xl mx-auto mb-4 text-white/80" />
 
