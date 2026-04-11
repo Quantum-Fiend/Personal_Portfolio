@@ -1,5 +1,6 @@
 "use client";
 import PageBanner from "@/Components/sections/PageBanner";
+import ArticlesSection from "@/Components/ui/ArticlesSection";
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
         tag="Writing Systems • Design Thinking"
         subtitle="Exploring engineering, UI systems, motion design, and scalable web experiences."
       />
+      <ArticlesSection />
     </div>
   );
 };
