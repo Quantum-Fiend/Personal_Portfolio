@@ -49,7 +49,7 @@ const MailIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-black text-white border-t border-white/10 overflow-hidden">
+    <footer className="relative w-full border-t border-white/10 overflow-hidden">
       {/* SUBTLE BACKGROUND */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.08),transparent_70%)]" />
 
