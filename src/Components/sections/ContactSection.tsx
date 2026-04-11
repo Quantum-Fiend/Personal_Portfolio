@@ -84,38 +84,46 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto space-y-5"
+          className="max-w-3xl mx-auto space-y-5 px-4 sm:px-0 text-center"
         >
-          <div className="grid sm:grid-cols-2 gap-4">
+          {/* INPUT GRID (ALWAYS CENTERED) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full p-4 rounded-xl bg-white/5 border border-white/10
-                         focus:border-white/40 outline-none transition"
+              className="w-full max-w-md p-4 rounded-xl bg-white/5 border border-white/10
+                 focus:border-white/40 outline-none transition text-center"
             />
+
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full p-4 rounded-xl bg-white/5 border border-white/10
-                         focus:border-white/40 outline-none transition"
+              className="w-full max-w-md p-4 rounded-xl bg-white/5 border border-white/10
+                 focus:border-white/40 outline-none transition text-center"
             />
           </div>
 
-          <textarea
-            rows={6}
-            placeholder="Your Message..."
-            className="w-full p-4 rounded-xl bg-white/5 border border-white/10
-                       focus:border-white/40 outline-none transition"
-          />
+          {/* TEXTAREA (CENTERED ALWAYS) */}
+          <div className="flex justify-center">
+            <textarea
+              rows={6}
+              placeholder="Your Message..."
+              className="w-full max-w-md p-4 rounded-xl bg-white/5 border border-white/10
+                 focus:border-white/40 outline-none transition resize-none text-center"
+            />
+          </div>
 
-          <motion.button
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            className="w-full py-4 rounded-xl bg-white text-black font-semibold
-                       hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition"
-          >
-            Send Message <FiSend className="inline ml-2" />
-          </motion.button>
+          {/* BUTTON (CENTERED ALWAYS) */}
+          <div className="flex justify-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-full max-w-md py-4 rounded-xl bg-white text-black font-semibold
+                 hover:shadow-[0_0_60px_rgba(255,255,255,0.25)] transition"
+            >
+              Send Message <FiSend className="inline ml-2" />
+            </motion.button>
+          </div>
         </motion.form>
 
         {/* ⚡ CTA TEXT */}
