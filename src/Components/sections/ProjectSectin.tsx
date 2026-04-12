@@ -217,7 +217,7 @@ export default function ProjectsSection() {
           className="flex justify-center mt-10"
         >
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/Quantum-Fiend?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative px-6 py-3 rounded-full border border-white/10 bg-white/5 overflow-hidden transition-all duration-300
