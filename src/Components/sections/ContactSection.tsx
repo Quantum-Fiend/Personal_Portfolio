@@ -35,7 +35,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-3 gap-6">
           {/* EMAIL - HERO CARD */}
           <motion.a
-            href="mailto:your@email.com"
+            href="mailto:tusharbisht706@gmail.com"
             whileHover={{ scale: 1.06, y: -8 }}
             className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
                        hover:shadow-[0_0_80px_rgba(255,255,255,0.15)] transition"
@@ -45,7 +45,9 @@ export default function ContactSection() {
             <FiMail className="text-3xl mx-auto mb-4 text-white/80" />
 
             <h3 className="text-lg font-semibold">Email Me</h3>
-            <p className="text-gray-400 text-sm mt-1">your@email.com</p>
+            <p className="text-gray-400 text-sm mt-1">
+              tusharbisht706@gmail.com
+            </p>
 
             <p className="text-xs text-gray-500 mt-4">
               Primary contact • Fast response
@@ -54,7 +56,7 @@ export default function ContactSection() {
 
           {/* LINKEDIN */}
           <motion.a
-            href="#"
+            href="www.linkedin.com/in/tushar-singh-bisht-a1099a314"
             whileHover={{ scale: 1.05, y: -6 }}
             className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
                        hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
@@ -68,7 +70,7 @@ export default function ContactSection() {
 
           {/* GITHUB */}
           <motion.a
-            href="#"
+            href="https://github.com/Quantum-Fiend"
             whileHover={{ scale: 1.05, y: -6 }}
             className="group relative p-8 rounded-3xl border border-white/10 bg-white/5 overflow-hidden
                        hover:shadow-[0_0_70px_rgba(255,255,255,0.12)] transition"
