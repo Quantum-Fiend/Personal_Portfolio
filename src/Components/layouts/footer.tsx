@@ -132,9 +132,10 @@ export default function Footer() {
         {/* =========================
             BOTTOM
         ========================= */}
-        <div className="flex flex-col md:flex-row justify-center items-center w-full text-xs text-gray-200 gap-4 mb-8 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full text-xs text-gray-200 gap-4 mb-6 md:mb-0">
           <p>© {new Date().getFullYear()} Tushar Singh Bisht 💫</p>
         </div>
+        <div className="w-48 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mb-6 md:mb-0 mt-2"></div>
       </div>
     </footer>
   );
