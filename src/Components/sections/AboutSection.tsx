@@ -53,14 +53,13 @@ const cards: CardItem[] = [
 ];
 
 export default function AboutSection() {
-  // 🔥 TYPEWRITER STATE (ADDED ONLY)
-  const words = ["backend", "systems", "frontends", "apps", "websites"];
-
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    const words = ["Backends", "Systems", "Frontends", "Apps", "Websites"];
+
     let timeout: NodeJS.Timeout;
 
     const currentWord = words[index];
