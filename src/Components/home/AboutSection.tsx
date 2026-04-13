@@ -37,7 +37,7 @@ export default function About() {
 
         {/* 🧠 FLOATING BADGES */}
         <div className="flex flex-wrap gap-3 justify-center mb-12">
-          {["Next.js", "TypeScript", "Full Stack", "UI/UX"].map((tag, i) => (
+          {["Curious", "Logical", "Strategic", "Adaptive"].map((tag, i) => (
             <motion.span
               key={tag}
               initial={{ opacity: 0, y: 10 }}

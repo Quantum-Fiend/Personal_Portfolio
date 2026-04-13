@@ -2,15 +2,15 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Code2, Palette, Rocket, Layers } from "lucide-react";
+import { Palette, Rocket, Atom, Braces, Server, Database } from "lucide-react";
 
 const skills = [
   { name: "Next.js", level: 95, icon: Rocket },
-  { name: "React", level: 92, icon: Code2 },
-  { name: "TypeScript", level: 88, icon: Layers },
+  { name: "React", level: 92, icon: Atom },
+  { name: "TypeScript", level: 88, icon: Braces },
   { name: "Tailwind CSS", level: 96, icon: Palette },
-  { name: "Java", level: 85, icon: Rocket },
-  { name: "Laravel", level: 80, icon: Palette },
+  { name: "Node.Js", level: 85, icon: Server },
+  { name: "PostgreSQL", level: 80, icon: Database },
 ];
 
 export default function Skills() {
@@ -131,7 +131,7 @@ export default function Skills() {
             whileTap={{ scale: 0.95 }}
             className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
           >
-            Explore More →
+            Explore More Skills →
           </motion.button>
         </Link>
       </div>
