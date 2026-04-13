@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Code2, Palette, Rocket, Layers } from "lucide-react";
 
 const skills = [
@@ -119,22 +120,20 @@ export default function Skills() {
             </div>
 
             {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex justify-center mt-16"
-            >
-              <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
-              >
-                Explore Skills →
-              </motion.button>
-            </motion.div>
           </div>
         </motion.div>
+        <Link href="/about">
+          <motion.button
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 30px rgba(139,92,246,0.4)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-8 px-6 py-3 rounded-full bg-linear-to-r from-white via-gray-300 to-gray-500 text-black font-semibold shadow-lg"
+          >
+            Explore More →
+          </motion.button>
+        </Link>
       </div>
     </section>
   );
