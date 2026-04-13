@@ -1,7 +1,5 @@
-"use client";
 import ContactSection from "@/Components/sections/ContactSection";
 import PageBanner from "@/Components/sections/PageBanner";
-
 
 const page = () => {
   return (

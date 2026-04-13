@@ -1,4 +1,3 @@
-"use client";
 import PageBanner from "@/Components/sections/PageBanner";
 import ArticlesSection from "@/Components/sections/ArticlesSection";
 

@@ -1,7 +1,5 @@
-"use client";
 import PageBanner from "@/Components/sections/PageBanner";
 import ProjectsSection from "@/Components/sections/ProjectSectin";
-
 
 const page = () => {
   return (
