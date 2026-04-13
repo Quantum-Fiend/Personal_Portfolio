@@ -9,8 +9,8 @@ const skills = [
   { name: "React", level: 92, icon: Code2 },
   { name: "TypeScript", level: 88, icon: Layers },
   { name: "Tailwind CSS", level: 96, icon: Palette },
-  { name: "Framer Motion", level: 85, icon: Rocket },
-  { name: "UI/UX Design", level: 80, icon: Palette },
+  { name: "Java", level: 85, icon: Rocket },
+  { name: "Laravel", level: 80, icon: Palette },
 ];
 
 export default function Skills() {
