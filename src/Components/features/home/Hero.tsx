@@ -45,7 +45,7 @@ export default function Hero() {
             </p>
 
             {/* actions */}
-            <div className="mt-10">
+            <div className="mt-4">
               <HeroActions />
             </div>
           </div>
