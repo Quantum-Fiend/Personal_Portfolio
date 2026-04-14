@@ -113,7 +113,7 @@ export default function HeroImage() {
             </svg>
 
             {/* ===== GLOW FIELD ===== */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/5 blur-2xl rounded-full opacity-60" />
+            <div className="absolute inset-0 bg-linear-to-r from-white/10 via-transparent to-white/5 blur-2xl rounded-full opacity-60" />
 
             {/* ===== FLOATING DATA DOTS ===== */}
             <div className="absolute top-3 right-3 w-1.5 h-1.5 bg-white rounded-full animate-ping" />
