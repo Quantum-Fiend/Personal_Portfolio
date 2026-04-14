@@ -1,17 +1,17 @@
-import AboutSection from "@/Components/home/AboutSection";
-import Hero from "@/Components/home/Hero";
-import Skills from "@/Components/home/SkillsSection";
-import ProjectSection from "@/Components/home/ProjectSection";
-import ArticleSection from "@/Components/home/ArticleSection";
+//import AboutSection from "@/components/home/AboutSection";
+import Hero from "@/components/features/home/Hero";
+//import Skills from "@/components/home/SkillsSection";
+//import ProjectSection from "@/components/home/ProjectSection";
+//import ArticleSection from "@/components/home/ArticleSection";
 
 const page = () => {
   return (
     <div>
       <Hero />
-      <AboutSection />
+      {/*<AboutSection />
       <Skills />
       <ProjectSection />
-      <ArticleSection />
+      <ArticleSection />*/}
     </div>
   );
 };
