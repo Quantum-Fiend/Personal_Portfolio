@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useTypingEffect } from "@/hooks/useTypingEffect";
-import { useState } from "react";
 
 export default function HeroText() {
   const text = "MY NAME IS ";
