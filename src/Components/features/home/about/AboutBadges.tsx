@@ -12,7 +12,7 @@ export default function AboutBadges() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
           whileHover={{ scale: 1.1 }}
-          className="px-4 py-1 text-xs rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white/80"
+          className="px-2 py-1 text-xs rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white/80"
         >
           {tag}
         </motion.span>
