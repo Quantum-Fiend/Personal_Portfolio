@@ -1,5 +1,5 @@
-import PageBanner from "@/Components/sections/PageBanner";
-import ArticlesSection from "@/Components/sections/ArticlesSection";
+import ArticlesPage from "@/components/features/articles/ArticlesPage";
+import PageBanner from "@/components/sections/PageBanner";
 
 const page = () => {
   return (
@@ -10,7 +10,7 @@ const page = () => {
         tag="Writing Systems • Design Thinking"
         subtitle="Exploring engineering, UI systems, motion design, and scalable web experiences."
       />
-      <ArticlesSection />
+      <ArticlesPage />
     </div>
   );
 };
