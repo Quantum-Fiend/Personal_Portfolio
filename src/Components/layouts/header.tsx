@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { HiOutlineBars3BottomRight } from "react-icons/hi2";
-import Sidebar from "@/Components/navigation/Sidebar";
+import Sidebar from "@/components/navigation/Sidebar";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
