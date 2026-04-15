@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { featuredProjects } from "./projects.data";
 
