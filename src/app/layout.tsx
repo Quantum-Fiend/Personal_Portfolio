@@ -8,9 +8,11 @@ import SplashCursor from "@/components/ui/SplashCursor";
 import Footer from "@/components/layouts/footer";
 import ShootingStars from "@/components/ui/ShootingStarEffect";
 import ScrollToTop from "@/components/ui/ScrollTop";
-import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 const funnelSans = Funnel_Sans({
   variable: "--font-funnel-sans",
@@ -24,12 +26,20 @@ export const metadata: Metadata = {
   description: "PortFolio App 🤗",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={cn("h-full", "antialiased", funnelSans.variable, "font-sans", geist.variable)}>
+    <html
+      lang="en"
+      className={`h-full antialiased ${funnelSans.variable} font-sans ${geist.variable}`}
+    >
       <body className="font-sans">
-        {/* BACKGROUND LAYER (ALWAYS FIRST) */}
+        {/* BACKGROUND LAYER */}
         <ShootingStars />
+
         {/* APP LAYER */}
         <div id="app-root">
           <Header />
