@@ -21,7 +21,7 @@ export default function Header() {
             absolute
             right-1 top-0            /* 📱 SMALL SCREEN: more right + top */
             sm:right-5 sm:top-5
-            lg:right-6 lg:top-6     /* 🖥️ BIG SCREEN: more right alignment */
+            lg:right-2 lg:top-2     /* 🖥️ BIG SCREEN: more right alignment */
           "
         >
           <button onClick={() => setOpen(true)} className="group relative">

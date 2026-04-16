@@ -23,12 +23,25 @@ export default function Sidebar({ open, setOpen }: Props) {
         }`}
       >
         {/* CLOSE BUTTON */}
-        <button
-          onClick={() => setOpen(false)}
-          className="absolute top-6 right-6 text-3xl text-white"
-        >
-          ✕
-        </button>
+   <button
+  onClick={() => setOpen(false)}
+  className="
+    absolute
+    top-4 right-4
+    sm:top-6 sm:right-6
+    lg:top-8 lg:right-8
+    w-10 h-10 sm:w-12 sm:h-12
+    rounded-full
+    bg-white/10 hover:bg-white/20
+    backdrop-blur-md
+    text-white text-2xl sm:text-3xl
+    flex items-center justify-center
+    transition-all duration-300
+    hover:scale-110 active:scale-95
+  "
+>
+  ✕
+</button>
 
         {/* MENU ITEMS */}
         <div className="flex flex-col h-full justify-center items-center gap-8 text-lg font-semibold tracking-wide">
