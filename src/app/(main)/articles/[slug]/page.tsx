@@ -1,12 +1,19 @@
 import { notFound } from "next/navigation";
-import { getPostBySlug } from "@/lib/mdx";
+import { getPostBySlug, getAllSlugs } from "@/lib/mdx";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export default function ArticlePage({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+// Generate static routes for all MDX files at build time
+export async function generateStaticParams() {
+  return getAllSlugs().map((slug) => ({ slug }));
+}
+
+export default async function ArticlePage({ params }: Props) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) return notFound();
 
@@ -16,7 +23,9 @@ export default function ArticlePage({ params }: Props) {
 
       <p className="text-white/60 mb-10">{post.frontmatter.description}</p>
 
-      <div className="prose prose-invert max-w-none">{post.content}</div>
+      <div className="prose prose-invert max-w-none">
+        <MDXRemote source={post.content} />
+      </div>
     </div>
   );
 }

@@ -4,13 +4,12 @@ import matter from "gray-matter";
 
 const articlesPath = path.join(process.cwd(), "src/content/articles");
 
-export function getPostBySlug(slug: string) {
+export async function getPostBySlug(slug: string) {
   if (!slug) return null;
 
   const fullPath = path.join(articlesPath, `${slug}.mdx`);
 
   if (!fs.existsSync(fullPath)) {
-    console.log("FILE NOT FOUND:", fullPath);
     return null;
   }
 
@@ -19,23 +18,14 @@ export function getPostBySlug(slug: string) {
 
   return {
     frontmatter: data,
-    content,
+    content, // raw MDX string — MDXRemote (rsc) handles compilation itself
   };
 }
-export function getAllPosts() {
-  const files = fs.readdirSync(articlesPath);
 
-  const posts = files
-    .filter((file) => file.endsWith(".mdx"))
-    .map((file) => {
-      const slug = file.replace(".mdx", "");
-      const { frontmatter } = getPostBySlug(slug)!;
-
-      return {
-        slug,
-        frontmatter,
-      };
-    });
-
-  return posts;
+export function getAllSlugs(): string[] {
+  if (!fs.existsSync(articlesPath)) return [];
+  return fs
+    .readdirSync(articlesPath)
+    .filter((f) => f.endsWith(".mdx"))
+    .map((f) => f.replace(/\.mdx$/, ""));
 }
