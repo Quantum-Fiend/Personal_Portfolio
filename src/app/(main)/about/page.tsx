@@ -1,6 +1,10 @@
 import AboutSection from "@/components/features/about/AboutSection";
 import PageBanner from "@/components/sections/PageBanner";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "About",
+};
 const about = () => {
   return (
     <div>

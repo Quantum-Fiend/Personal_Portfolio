@@ -1,5 +1,10 @@
 import PageBanner from "@/components/sections/PageBanner";
 import ProjectsPage from "@/components/features/projects/ProjectsPage";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 const page = () => {
   return (

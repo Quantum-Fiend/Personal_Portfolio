@@ -22,8 +22,11 @@ const funnelSans = Funnel_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PortFolio | Tushar Singh",
-  description: "PortFolio App 🤗",
+  title: {
+    default: "Portfolio",
+    template: "%s | Portfolio",
+  },
+  description: "Software Developer Portfolio",
 };
 
 export default function RootLayout({
