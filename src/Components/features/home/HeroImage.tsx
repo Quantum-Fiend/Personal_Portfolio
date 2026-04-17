@@ -52,6 +52,7 @@ export default function HeroImage() {
                 <Image
                   src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
                   alt="profile"
+				  priority
                   fill
                   className="object-cover"
                 />
