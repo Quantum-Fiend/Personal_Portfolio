@@ -33,7 +33,7 @@ export default function SocialBar() {
         <div className="w-px h-16 bg-white/30"></div>
       </div>
       {/* Mobile (Bottom Bar) */}
-      <div className="fixed bottom-3 left-1/2 -translate-x-1/2 flex md:hidden items-center gap-3 px-4 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg z-50">
+      <div className="fixed bottom-1 left-1/2 -translate-x-1/2 flex md:hidden items-center gap-2 px-2 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg z-50">
         <a
           href="mailto:tusharbisht706@gmail.com"
           className="w-9 h-9 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 active:scale-90"
