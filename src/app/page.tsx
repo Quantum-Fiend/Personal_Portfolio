@@ -1,5 +1,5 @@
 import AboutSection from "@/components/features/home/about/AboutSection";
-import ArticlesSection from "@/components/features/home/article/ArticlesSection";
+//import ArticlesSection from "@/components/features/home/article/ArticlesSection";
 import Hero from "@/components/features/home/Hero";
 import ProjectsSection from "@/components/features/home/project/ProjectsSection";
 import SkillsSection from "@/components/features/home/skills/SkillsSection";
@@ -16,7 +16,7 @@ const page = () => {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
-      <ArticlesSection />
+      {/*<ArticlesSection />*/}
     </div>
   );
 };
