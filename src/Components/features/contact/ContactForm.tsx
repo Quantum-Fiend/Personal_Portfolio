@@ -39,9 +39,9 @@ export default function ContactForm() {
           setForm({ name: "", email: "", message: "" });
           return "Delivered ~ Thanks For Reaching Out 🙌";
         }
-        throw new Error("Failed");
+        throw new Error("Ohh ohh Failed");
       },
-      error: "Something went wrong. Try again!",
+      error: "Something went wrong. Try again..!",
     });
   };
 
