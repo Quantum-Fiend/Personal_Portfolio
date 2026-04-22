@@ -15,7 +15,7 @@ export default function GithubProjects() {
         Backend systems, APIs, and engineering experiments
       </p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
         {githubProjects.map((p, i) => (
           <ProjectCard key={i} p={p} index={0} />
         ))}
