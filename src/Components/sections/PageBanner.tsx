@@ -52,7 +52,7 @@ export default function PageBanner({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight"
+          className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight"
         >
           {title}{" "}
           {highlight && <span className="text-gray-400">{highlight}</span>}
@@ -62,11 +62,11 @@ export default function PageBanner({
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ delay: 0.3, duration: 0.7 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-4 flex items-center justify-center"
         >
           <div className="relative">
-            <div className="h-0.5 w-90 bg-linear-to-r from-transparent via-gray-400 to-transparent" />
+            <div className="h-0.5 w-50 sm:w-90 bg-linear-to-r from-transparent via-gray-400 to-transparent" />
 
             <motion.div
               animate={{ x: [-40, 40, -40] }}
@@ -81,7 +81,7 @@ export default function PageBanner({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="mt-5 inline-flex items-center gap-2 px-4 py-1 rounded-full border border-white/10 text-xs sm:text-sm text-gray-300"
+          className="mt-5 inline-flex items-center gap-2 text-center px-4 py-1 rounded-full border border-white/10 text-xs sm:text-sm text-gray-200"
         >
           <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
           {tag}
@@ -92,7 +92,7 @@ export default function PageBanner({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55 }}
-          className="mt-6 text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
+          className="mt-6 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto"
         >
           {subtitle}
         </motion.p>
@@ -102,13 +102,13 @@ export default function PageBanner({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="mt-8 flex flex-wrap justify-center gap-3"
+          className="mt-8 flex flex-wrap justify-evenly items-center gap-2"
         >
           {chips.map((item, i) => (
             <motion.span
               key={i}
               whileHover={{ scale: 1.1 }}
-              className="px-3 py-1 text-xs sm:text-sm rounded-full border border-white/10 text-gray-300 hover:border-white/30 transition"
+              className="px-4 py-2 text-sm sm:text-sm rounded-full border border-white/10 text-gray-300 hover:border-white/30 transition"
             >
               {item}
             </motion.span>
@@ -125,7 +125,7 @@ export default function PageBanner({
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 rounded-full border border-white/20 text-sm text-gray-200 hover:border-white/50 transition"
+            className="px-5 py-3 rounded-full border border-white/20 text-sm text-gray-200 hover:border-white/50 transition"
           >
             Let’s Work Together
           </motion.button>

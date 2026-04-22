@@ -9,7 +9,7 @@ export type Project = {
 };
 
 const IMAGE =
-  "/project-image.png";
+  "/re-start.png";
 
 export const featuredProjects: Project[] = [
   {
