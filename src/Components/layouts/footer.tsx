@@ -63,7 +63,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-6xl font-bold leading-tight bg-linear-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
             Let’s build something
             <br />
             <span className="relative inline-block">
@@ -100,7 +100,7 @@ export default function Footer() {
         {/* =========================
             SOCIAL ICONS (CENTERED)
         ========================= */}
-        <div className="mt-10 flex justify-center gap-6">
+        <div className="mt-5 flex justify-center gap-5">
           <motion.a
             whileHover={{ y: -4, scale: 1.1 }}
             href="https://github.com/Quantum-Fiend"
@@ -132,10 +132,10 @@ export default function Footer() {
         {/* =========================
             BOTTOM
         ========================= */}
-        <div className="flex flex-col md:flex-row justify-center items-center w-full text-xs text-gray-200 gap-4 mb-6 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-center items-center w-full text-xs text-gray-200 gap-4 mb-2 md:mb-0">
           <p>© {new Date().getFullYear()} Tushar Singh Bisht 💫</p>
         </div>
-        <div className="w-48 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mb-6 md:mb-0 mt-2"></div>
+        <div className="w-28 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mb-2 md:mb-0 mt-0 sm:mt-2"></div>
       </div>
     </footer>
   );
