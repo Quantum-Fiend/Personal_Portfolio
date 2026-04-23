@@ -51,7 +51,7 @@ export const githubProjects: Project[] = [
   {
     title: "Aevum",
     desc: "A next-generation debugging platform for distributed systems that enables time-travel debugging, causal tracing, and deep state inspection across microservices and async workflows.",
-    tech: ["Express", "Redis"],
+    tech: ["Rust", "Go","TypeScript", "Python", "Java","React"],
     features: [
       "Time-travel debugging across system execution history",
       "Causal graph visualization of distributed events (DAG)",
