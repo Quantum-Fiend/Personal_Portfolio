@@ -8,9 +8,6 @@ export type Project = {
   github?: string;
 };
 
-const IMAGE =
-  "/re-start.png";
-
 export const featuredProjects: Project[] = [
   {
     title: "Re-Start (Full-Stack / Agency Website)",
@@ -21,7 +18,7 @@ export const featuredProjects: Project[] = [
       "SEO-friendly and performance optimized layout",
       "Clean navigation with professional branding",
     ],
-    image: IMAGE,
+    image: "/project-page-images/re-start.png",
     live: "https://re-start.in/",
   },
 ];
@@ -32,7 +29,7 @@ export const githubProjects: Project[] = [
     desc: "Socket-based messaging system with instant synchronization layer.",
     tech: ["Socket.io", "Node.js"],
     features: ["Instant messaging", "Live sync", "Low latency architecture"],
-    image: IMAGE,
+    image: "IMAGE",
     github: "#",
   },
   {
@@ -40,7 +37,7 @@ export const githubProjects: Project[] = [
     desc: "Secure JWT authentication system with role-based access control.",
     tech: ["Node.js", "JWT"],
     features: ["JWT security", "Role access", "Session handling"],
-    image: IMAGE,
+    image: "IMAGE",
     github: "#",
   },
   {
@@ -48,7 +45,15 @@ export const githubProjects: Project[] = [
     desc: "Backend middleware for controlling API abuse and request throttling.",
     tech: ["Express", "Redis"],
     features: ["Request throttling", "Redis caching", "Abuse protection"],
-    image: IMAGE,
+    image: "IMAGE",
+    github: "#",
+  },
+  {
+    title: "API Rate Limiter",
+    desc: "Backend middleware for controlling API abuse and request throttling.",
+    tech: ["Express", "Redis"],
+    features: ["Request throttling", "Redis caching", "Abuse protection"],
+    image: "IMAGE",
     github: "#",
   },
 ];

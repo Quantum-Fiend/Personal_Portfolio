@@ -12,70 +12,69 @@ type Props = {
 
 export default function ProjectCard({ p, index }: Props) {
   return (
-    <div className="w-full flex items-center justify-center px-4">
+    <div className="w-full flex justify-center px-4">
       <motion.div
-        initial={{ opacity: 0, y: 60 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
-        className="group relative w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl"
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.5, delay: index * 0.08 }}
+        className="group relative w-full max-w-md sm:max-w-xl lg:max-w-2xl"
       >
-        {/* Glow */}
-        <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-purple-500/20 via-transparent to-blue-500/20 opacity-0 group-hover:opacity-100 blur-xl transition duration-500" />
+        {/* Glow (softer + premium) */}
+        <div className="absolute -inset-0.5 rounded-3xl bg-linear-to-r from-purple-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 blur-lg transition duration-500" />
 
         {/* Card */}
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-xl transition-all duration-500 group-hover:scale-[1.04] group-hover:shadow-purple-500/20 p-5 sm:p-6 md:p-7 text-center">
+        <div className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg transition-all duration-500 group-hover:shadow-purple-500/20 group-hover:-translate-y-1 p-5 sm:p-6">
           {/* Image */}
-          <div className="relative h-48 sm:h-56 md:h-64 w-full overflow-hidden rounded-2xl border border-white/10">
+          <div className="relative h-48 sm:h-60 w-full overflow-hidden rounded-2xl border border-white/10">
             <Image
               src={p.image || "/placeholder.png"}
               alt={p.title}
               fill
-              className="object-cover transition duration-700 group-hover:scale-110"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 700px"
+              className="object-cover transition duration-700 group-hover:scale-105"
+              priority={index === 0}
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
-            {/* Shine */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-linear-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full" />
-
-            {/* CENTER BUTTONS */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition">
+            {/* Hover actions (desktop only feel, but still visible on tap) */}
+            <div className="absolute inset-0 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition duration-300">
               {p.live && (
-                <button
-                  onClick={() =>
-                    window.open(p.live, "_blank", "noopener,noreferrer")
-                  }
-                  className="px-5 py-2 rounded-full bg-linear-to-r from-white via-gray-300   text-black text-sm font-medium shadow-lg hover:scale-105 transition flex items-center gap-2"
+                <a
+                  href={p.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full bg-white text-black text-xs sm:text-sm font-medium shadow-md hover:scale-105 transition flex items-center gap-2"
                 >
-                  <FiExternalLink /> View Live
-                </button>
+                  <FiExternalLink /> Live
+                </a>
               )}
 
               {p.github && (
-                <button
-                  onClick={() =>
-                    window.open(p.github, "_blank", "noopener,noreferrer")
-                  }
-                  className="px-5 py-2 rounded-full border border-white/30 text-white text-sm font-medium hover:bg-white/10 hover:scale-105 transition flex items-center gap-2"
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-full border border-white/30 text-white text-xs sm:text-sm font-medium hover:bg-white/10 hover:scale-105 transition flex items-center gap-2"
                 >
-                  <FiGithub /> View Code
-                </button>
+                  <FiGithub /> Code
+                </a>
               )}
             </div>
           </div>
 
           {/* Content */}
-          <div className="mt-6 flex flex-col items-center">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+          <div className="mt-5 text-center">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white tracking-tight">
               {p.title}
             </h3>
 
             {/* underline */}
-            <div className="w-10 h-0.5 bg-linear-to-r from-white/60 to-transparent mt-2 group-hover:w-16 transition-all duration-500" />
+            <div className="w-8 h-0.5 bg-linear-to-r from-white/70 to-transparent mx-auto mt-2 group-hover:w-14 transition-all duration-500" />
 
-            <p className="text-xs sm:text-sm text-gray-400 mt-4 leading-relaxed max-w-md">
+            <p className="text-xs sm:text-sm text-gray-400 mt-4 leading-relaxed max-w-md mx-auto">
               {p.desc}
             </p>
 
@@ -86,7 +85,7 @@ export default function ProjectCard({ p, index }: Props) {
                   key={i}
                   className="text-[11px] sm:text-xs text-gray-400 flex items-center justify-center gap-2"
                 >
-                  <span className="text-white">•</span> {f}
+                  <span className="text-white/70">•</span> {f}
                 </p>
               ))}
             </div>
@@ -96,35 +95,35 @@ export default function ProjectCard({ p, index }: Props) {
               {p.tech.map((t, i) => (
                 <span
                   key={i}
-                  className="text-[10px] sm:text-[11px] px-2.5 py-1 rounded-full border border-white/10 text-gray-300 bg-white/5 hover:bg-white/10 transition"
+                  className="text-[10px] sm:text-xs px-3 py-1 rounded-full border border-white/10 text-gray-300 bg-white/5 hover:bg-white/10 transition"
                 >
                   {t}
                 </span>
               ))}
             </div>
 
-            {/* Bottom links */}
-            <div className="flex items-center justify-center gap-6 mt-6">
+            {/* Bottom links (mobile-friendly always visible) */}
+            <div className="flex justify-center gap-6 mt-6">
               {p.live && (
-                <button
-                  onClick={() =>
-                    window.open(p.live, "_blank", "noopener,noreferrer")
-                  }
-                  className="flex items-center gap-2 text-sm text-blue-400"
+                <a
+                  href={p.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 transition"
                 >
                   <FiExternalLink size={16} /> Live
-                </button>
+                </a>
               )}
 
               {p.github && (
-                <button
-                  onClick={() =>
-                    window.open(p.github, "_blank", "noopener,noreferrer")
-                  }
-                  className="flex items-center gap-2 text-sm text-gray-300"
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition"
                 >
                   <FiGithub size={16} /> Code
-                </button>
+                </a>
               )}
             </div>
           </div>
