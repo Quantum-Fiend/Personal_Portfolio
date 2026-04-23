@@ -25,19 +25,23 @@ export const featuredProjects: Project[] = [
 
 export const githubProjects: Project[] = [
   {
-    title: "Realtime Chat System",
-    desc: "Socket-based messaging system with instant synchronization layer.",
-    tech: ["Socket.io", "Node.js"],
-    features: ["Instant messaging", "Live sync", "Low latency architecture"],
-    image: "IMAGE",
-    github: "#",
+    title: "Neuro_Vault_Ai",
+    desc: "NeuroVault is an AI-powered knowledge base that lets users upload PDFs, code, and web data and then ask questions using semantic search and LLM-based responses.",
+    tech: ["Python", "Go" , "Next Js" , "Postgre Sql" , "Redis","Docker"],
+    features: [
+      "Uploads and indexes PDFs, code, and web data",
+      "Enables semantic search using embeddings",
+      "Uses LLMs to answer questions from stored knowledge",
+    ],
+    image: "/project-page-images/NeuroVault.png",
+    github: "https://github.com/Quantum-Fiend/Neuro_Vault",
   },
   {
     title: "Auth System Boilerplate",
     desc: "Secure JWT authentication system with role-based access control.",
     tech: ["Node.js", "JWT"],
     features: ["JWT security", "Role access", "Session handling"],
-    image: "IMAGE",
+    image: "/project-page-images/re-start.png",
     github: "#",
   },
   {
@@ -45,7 +49,7 @@ export const githubProjects: Project[] = [
     desc: "Backend middleware for controlling API abuse and request throttling.",
     tech: ["Express", "Redis"],
     features: ["Request throttling", "Redis caching", "Abuse protection"],
-    image: "IMAGE",
+    image: "/project-page-images/re-start.png",
     github: "#",
   },
   {
@@ -53,7 +57,7 @@ export const githubProjects: Project[] = [
     desc: "Backend middleware for controlling API abuse and request throttling.",
     tech: ["Express", "Redis"],
     features: ["Request throttling", "Redis caching", "Abuse protection"],
-    image: "IMAGE",
+    image: "/project-page-images/re-start.png",
     github: "#",
   },
 ];

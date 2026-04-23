@@ -57,7 +57,7 @@ export default function ProjectCard({ p, index }: Props) {
                   href={p.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-full border border-white/30 text-white text-xs sm:text-sm font-medium hover:bg-white/10 hover:scale-105 transition flex items-center gap-2"
+                  className="px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-xs sm:text-sm font-medium backdrop-blur-md shadow-md hover:bg-white/20 hover:scale-105 hover:shadow-white/10 transition-all duration-300 flex items-center gap-2"
                 >
                   <FiGithub /> Code
                 </a>

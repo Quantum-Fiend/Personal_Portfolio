@@ -40,7 +40,7 @@ export default function RootLayout({
       lang="en"
       className={`h-full antialiased ${funnelSans.variable} font-sans ${geist.variable}`}
     >
-      <body className="font-sans">
+      <body suppressContentEditableWarning className="font-sans">
         {/* BACKGROUND LAYER */}
         <ShootingStars />
 
