@@ -51,7 +51,7 @@ export const githubProjects: Project[] = [
   {
     title: "Aevum",
     desc: "A next-generation debugging platform for distributed systems that enables time-travel debugging, causal tracing, and deep state inspection across microservices and async workflows.",
-    tech: ["Rust", "Go","TypeScript", "Python", "Java","React"],
+    tech: ["Rust", "Go", "TypeScript", "Python", "Java", "React"],
     features: [
       "Time-travel debugging across system execution history",
       "Causal graph visualization of distributed events (DAG)",
@@ -61,11 +61,15 @@ export const githubProjects: Project[] = [
     github: "https://github.com/Quantum-Fiend/Aevum",
   },
   {
-    title: "API Rate Limiter",
-    desc: "Backend middleware for controlling API abuse and request throttling.",
-    tech: ["Express", "Redis"],
-    features: ["Request throttling", "Redis caching", "Abuse protection"],
-    image: "/project-page-images/re-start.png",
-    github: "#",
+    title: "Secure_Vault_Cli",
+    desc: "securevault-cli is a command-line tool for securely storing and managing sensitive data using encryption, allowing users to safely handle secrets directly from the terminal.",
+    tech: ["Dart", "Batch File"],
+    features: [
+      "Encrypts and securely stores sensitive data in a vault",
+      "CLI-based interface for easy terminal operations",
+      "Supports saving and retrieving secrets securely",
+    ],
+    image: "/project-page-images/SecureVault.png",
+    github: "https://github.com/Quantum-Fiend/Secure_Vault_Cli",
   },
 ];
