@@ -126,5 +126,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ---
 
 <p align="center">
-  Built with ❤️ by <b>Your Name</b>
+  Built with ❤️ by <b>Tushar Singh bisht 😊</b>
 </p>
