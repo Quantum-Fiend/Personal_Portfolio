@@ -1,6 +1,11 @@
 import { FaInstagram, FaLinkedinIn, FaGithub, FaDiscord } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+const linkProps = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+};
+
 export default function SocialBar() {
   return (
     <>
@@ -11,20 +16,34 @@ export default function SocialBar() {
         <a href="mailto:tusharbisht706@gmail.com" className="icon email">
           <MdEmail />
         </a>
+
         <a
           href="https://www.linkedin.com/in/tushar-singh-bisht-a1099a314"
+          {...linkProps}
           className="icon linkedin"
         >
           <FaLinkedinIn />
         </a>
-        <a href="https://github.com/Quantum-Fiend" className="icon github">
+
+        <a
+          href="https://github.com/Quantum-Fiend"
+          {...linkProps}
+          className="icon github"
+        >
           <FaGithub />
         </a>
-        <a href="https://discord.gg/z4fqpBv4yu" className="icon discord">
+
+        <a
+          href="https://discord.gg/z4fqpBv4yu"
+          {...linkProps}
+          className="icon discord"
+        >
           <FaDiscord />
         </a>
+
         <a
           href="https://www.instagram.com/tushar___bisht__16/"
+          {...linkProps}
           className="icon instagram"
         >
           <FaInstagram />
@@ -32,6 +51,7 @@ export default function SocialBar() {
 
         <div className="w-px h-16 bg-white/30"></div>
       </div>
+
       {/* Mobile (Bottom Bar) */}
       <div className="fixed bottom-1 left-1/2 -translate-x-1/2 flex md:hidden items-center gap-2 px-2 py-2 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg z-50">
         <a
@@ -43,7 +63,7 @@ export default function SocialBar() {
 
         <a
           href="https://www.linkedin.com/in/tushar-singh-bisht-a1099a314"
-          target="_blank"
+          {...linkProps}
           className="w-9 h-9 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 active:scale-90"
         >
           <FaLinkedinIn size={15} />
@@ -51,7 +71,7 @@ export default function SocialBar() {
 
         <a
           href="https://github.com/Quantum-Fiend?tab=repositories"
-          target="_blank"
+          {...linkProps}
           className="w-9 h-9 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 active:scale-90"
         >
           <FaGithub size={16} />
@@ -59,6 +79,7 @@ export default function SocialBar() {
 
         <a
           href="https://discord.gg/z4fqpBv4yu"
+          {...linkProps}
           className="w-9 h-9 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 active:scale-90"
         >
           <FaDiscord size={16} />
@@ -66,7 +87,7 @@ export default function SocialBar() {
 
         <a
           href="https://www.instagram.com/tushar___bisht__16/"
-          target="_blank"
+          {...linkProps}
           className="w-9 h-9 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 active:scale-90"
         >
           <FaInstagram size={16} />
