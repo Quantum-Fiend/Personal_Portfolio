@@ -7,26 +7,26 @@ export default function HeroImage() {
   return (
     <div className="w-full flex justify-center lg:translate-x-20">
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
+        initial={{ opacity: 0, scale: 1 }} // 👈 no initial scale down
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
         className="w-full"
       >
         <Image
           src="/Banner.png"
           alt="hero banner"
-          width={0}
-          height={0}
+          width={1200} // 👈 FIXED
+          height={800} // 👈 FIXED
           sizes="100vw"
           priority
+          quality={75} // 👈 compress
           className="
             w-full 
             h-auto 
-			rounded-full
-            object-contain 
-            scale-110 
-            md:scale-125 
-            lg:scale-150
+            rounded-full
+            object-contain
+            md:scale-110 
+            lg:scale-140   // 👈 reduced from 150
             drop-shadow-2xl
           "
         />
