@@ -20,10 +20,7 @@ export default function SocialBar() {
         <a href="https://github.com/Quantum-Fiend" className="icon github">
           <FaGithub />
         </a>
-        <a
-          href="https://discord.com/users/1320766944164708352"
-          className="icon discord"
-        >
+        <a href="https://discord.gg/z4fqpBv4yu" className="icon discord">
           <FaDiscord />
         </a>
         <a
@@ -61,7 +58,7 @@ export default function SocialBar() {
         </a>
 
         <a
-          href="https://discord.com/users/1320766944164708352"
+          href="https://discord.gg/z4fqpBv4yu"
           className="w-9 h-9 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 active:scale-90"
         >
           <FaDiscord size={16} />
