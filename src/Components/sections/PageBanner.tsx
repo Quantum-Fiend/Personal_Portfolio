@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 type PageBannerProps = {
   title: string;
@@ -18,16 +17,7 @@ export default function PageBanner({
   tag,
   chips = [],
 }: PageBannerProps) {
-  const shouldReduceMotion = useReducedMotion();
-
-  const [reduceMotion, setReduceMotion] = useState(true);
-
-  useEffect(() => {
-    if (typeof shouldReduceMotion === "boolean") {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setReduceMotion(shouldReduceMotion);
-    }
-  }, [shouldReduceMotion]);
+  const reduceMotion = useReducedMotion();
 
   return (
     <section className="relative w-full min-h-[75vh] flex items-center justify-center overflow-hidden px-6">
@@ -52,12 +42,8 @@ export default function PageBanner({
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* subtle grid */}
-      <div className="absolute inset-0 opacity-[0.015] sm:opacity-[0.03] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-size-[80px_80px]" />
-
       {/* CONTENT */}
       <div className="relative z-10 text-center max-w-4xl">
-        {/* TITLE */}
         <motion.h1
           initial={reduceMotion ? false : { opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,31 +54,15 @@ export default function PageBanner({
           {highlight && <span className="text-gray-400">{highlight}</span>}
         </motion.h1>
 
-        {/* LINE */}
         <motion.div
           initial={reduceMotion ? false : { scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-4 flex items-center justify-center"
         >
-          <div className="relative">
-            <div className="h-0.5 w-50 sm:w-90 bg-linear-to-r from-transparent via-gray-400 to-transparent" />
-
-            {!reduceMotion && (
-              <motion.div
-                animate={{ x: [-40, 40, -40] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute -top-0.75 left-1/2 w-1.5 h-1.5 bg-white rounded-full"
-              />
-            )}
-          </div>
+          <div className="h-0.5 w-50 sm:w-90 bg-linear-to-r from-transparent via-gray-400 to-transparent" />
         </motion.div>
 
-        {/* TAG */}
         <motion.div
           initial={reduceMotion ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +73,6 @@ export default function PageBanner({
           {tag}
         </motion.div>
 
-        {/* DESCRIPTION */}
         <motion.p
           initial={reduceMotion ? false : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,40 +81,6 @@ export default function PageBanner({
         >
           {subtitle}
         </motion.p>
-
-        {/* CHIPS */}
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="mt-8 flex flex-wrap justify-evenly items-center gap-2"
-        >
-          {chips.map((item, i) => (
-            <motion.span
-              key={i}
-              whileHover={reduceMotion ? {} : { scale: 1.1 }}
-              className="px-4 py-2 text-sm rounded-full border border-white/10 text-gray-300 hover:border-white/30 transition"
-            >
-              {item}
-            </motion.span>
-          ))}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          initial={reduceMotion ? false : { opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.9 }}
-          className="mt-10"
-        >
-          <motion.button
-            whileHover={reduceMotion ? {} : { scale: 1.05 }}
-            whileTap={reduceMotion ? {} : { scale: 0.95 }}
-            className="px-5 py-3 rounded-full border border-white/20 text-sm text-gray-200 hover:border-white/50 transition"
-          >
-            Let’s Work Together
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );
