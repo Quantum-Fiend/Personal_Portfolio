@@ -1,7 +1,7 @@
-import AboutHero from "./AboutHero";
-import AboutIntro from "./AboutIntro";
-import AboutCards from "./AboutCards";
-import AboutFinalStatement from "./AboutFinalStatement";
+import AboutHero from "@/components/features/about/AboutHero";
+import AboutIntro from "@/components/features/about/AboutIntro";
+import AboutCards from "@/components/features/about/AboutCards";
+import AboutFinalStatement from "@/components/features/about/AboutFinalStatement";
 
 export default function AboutSection() {
   return (
